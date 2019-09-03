@@ -1,0 +1,1164 @@
+2019-05-14 20:10:27 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\engine.py", line 127, in _next_request
+    request = next(slot.start_requests)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 17, in start_requests
+    yield Request(url=start_urls, callback=self.parse, dont_filter=True, headers=headers)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\http\request\__init__.py", line 25, in __init__
+    self._set_url(url)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\http\request\__init__.py", line 56, in _set_url
+    raise TypeError('Request url must be str or unicode, got %s:' % type(url).__name__)
+TypeError: Request url must be str or unicode, got list:
+2019-05-14 20:17:48 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 21, in parse
+    print(response.body.encoding('utf-8'))
+AttributeError: 'bytes' object has no attribute 'encoding'
+2019-05-15 18:07:56 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 24, in parse
+    house_address = info.xpath('/div/p/a/text()').extract()[1]
+IndexError: list index out of range
+2019-05-15 18:08:38 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 24, in parse
+    house_address = info.xpath('./div/p/a/text()').extract()[1]
+IndexError: list index out of range
+2019-05-15 18:51:39 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 34, in parse
+    print(house_href.group())
+AttributeError: 'NoneType' object has no attribute 'group'
+2019-05-15 19:57:11 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET https://cd.lianjia.com/robots.txt>: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\endpoints.py", line 975, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+2019-05-15 20:00:09 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 35, in parse
+    print(house_price.text)
+AttributeError: 'list' object has no attribute 'text'
+2019-05-15 20:00:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 35, in parse
+    print(house_price.get_text())
+AttributeError: 'list' object has no attribute 'get_text'
+2019-05-15 20:01:38 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 35, in parse
+    print(house_price.string)
+AttributeError: 'list' object has no attribute 'string'
+2019-05-15 20:09:58 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 35, in parse
+    print(type(house_price), house_price.string)
+AttributeError: 'str' object has no attribute 'string'
+2019-05-15 20:10:23 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 35, in parse
+    print(type(house_price), house_price.text)
+AttributeError: 'str' object has no attribute 'text'
+2019-05-15 20:10:49 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 35, in parse
+    print(type(house_price), house_price.get_text())
+AttributeError: 'str' object has no attribute 'get_text'
+2019-05-15 20:12:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 34, in parse
+    house_price = info.xpath('./div/span[@class="content__list--item-price"]/string').extract()[0]
+IndexError: list index out of range
+2019-05-15 20:17:40 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 238, in xpath
+    **kwargs)
+  File "src\lxml\etree.pyx", line 1577, in lxml.etree._Element.xpath
+  File "src\lxml\xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__
+  File "src\lxml\xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 34, in parse
+    house_price = info.xpath('strint(./div/span[@class="content__list--item-price"]）').extract()[0]
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 242, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 238, in xpath
+    **kwargs)
+  File "src\lxml\etree.pyx", line 1577, in lxml.etree._Element.xpath
+  File "src\lxml\xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__
+  File "src\lxml\xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result
+ValueError: XPath error: Invalid expression in strint(./div/span[@class="content__list--item-price"]）
+2019-05-15 20:19:32 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 238, in xpath
+    **kwargs)
+  File "src\lxml\etree.pyx", line 1577, in lxml.etree._Element.xpath
+  File "src\lxml\xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__
+  File "src\lxml\xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 34, in parse
+    house_price = info.xpath('strint(./div/span[@class="content__list--item-price"]）').extract()[0]
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 242, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 238, in xpath
+    **kwargs)
+  File "src\lxml\etree.pyx", line 1577, in lxml.etree._Element.xpath
+  File "src\lxml\xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__
+  File "src\lxml\xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result
+ValueError: XPath error: Invalid expression in strint(./div/span[@class="content__list--item-price"]）
+2019-05-15 20:20:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 238, in xpath
+    **kwargs)
+  File "src\lxml\etree.pyx", line 1577, in lxml.etree._Element.xpath
+  File "src\lxml\xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__
+  File "src\lxml\xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 34, in parse
+    house_price = info.xpath('strint(./div/span[@class="content__list--item-price"]）').extract()[0]
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 242, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 238, in xpath
+    **kwargs)
+  File "src\lxml\etree.pyx", line 1577, in lxml.etree._Element.xpath
+  File "src\lxml\xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__
+  File "src\lxml\xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result
+ValueError: XPath error: Invalid expression in strint(./div/span[@class="content__list--item-price"]）
+2019-05-15 20:21:03 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 238, in xpath
+    **kwargs)
+  File "src\lxml\etree.pyx", line 1577, in lxml.etree._Element.xpath
+  File "src\lxml\xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__
+  File "src\lxml\xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 34, in parse
+    house_price = info.xpath('string(./div/span[@class="content__list--item-price"]）').extract()[0]
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 242, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 238, in xpath
+    **kwargs)
+  File "src\lxml\etree.pyx", line 1577, in lxml.etree._Element.xpath
+  File "src\lxml\xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__
+  File "src\lxml\xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result
+ValueError: XPath error: Invalid expression in string(./div/span[@class="content__list--item-price"]）
+2019-05-15 20:21:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 35, in parse
+    print(house_price ,house_price.xpath('string(.)'))
+AttributeError: 'str' object has no attribute 'xpath'
+2019-05-15 20:34:30 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 39, in parse
+    par_href = re.findall(r'/zufang/CD\d+.html', info.xpath('./div/p/a/@href').extract()[0])[0]
+IndexError: list index out of range
+2019-05-15 20:48:56 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 39, in parse
+    house_source = info.xpath('./p[@class="content__list--item--brand oneline"]/text()').extract()[0]
+IndexError: list index out of range
+2019-05-15 20:53:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 238, in xpath
+    **kwargs)
+  File "src\lxml\etree.pyx", line 1577, in lxml.etree._Element.xpath
+  File "src\lxml\xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__
+  File "src\lxml\xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 39, in parse
+    house_source = info.xpath('./div/div/p[3]text()').extract()
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 242, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\parsel\selector.py", line 238, in xpath
+    **kwargs)
+  File "src\lxml\etree.pyx", line 1577, in lxml.etree._Element.xpath
+  File "src\lxml\xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__
+  File "src\lxml\xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result
+ValueError: XPath error: Invalid expression in ./div/div/p[3]text()
+2019-05-15 21:11:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//apartment/2366.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 57, in parse_par
+    print(putaway[1].strip())
+IndexError: list index out of range
+2019-05-15 21:11:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//apartment/1419.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 57, in parse_par
+    print(putaway[1].strip())
+IndexError: list index out of range
+2019-05-15 21:11:25 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//apartment/5526.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 57, in parse_par
+    print(putaway[1].strip())
+IndexError: list index out of range
+2019-05-15 21:12:30 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//apartment/2366.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 57, in parse_par
+    print(re.findall(r'\d+-\d+-\d+', putaway[1].strip()))
+IndexError: list index out of range
+2019-05-15 21:12:31 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//apartment/5526.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 57, in parse_par
+    print(re.findall(r'\d+-\d+-\d+', putaway[1].strip()))
+IndexError: list index out of range
+2019-05-15 21:12:32 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//apartment/1419.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 57, in parse_par
+    print(re.findall(r'\d+-\d+-\d+', putaway[1].strip()))
+IndexError: list index out of range
+2019-05-15 22:04:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2238224072062271488.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2207219398643548160.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2238361053753262080.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2203614155280220160.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2212283409546887168.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2213609971172507648.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2255045855965093888.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2253491314866003968.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2239095161718317056.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//apartment/2366.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2215841798541287424.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2204334084200087552.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2197028131724853248.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2213610397590888448.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2204815762039259136.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2213620663611301888.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2212928180967178240.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2247695633366654976.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2246964924498575360.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2202120658736128000.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2202203602045640704.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2200520644544692224.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//apartment/5526.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2199710070692904960.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//apartment/1419.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2239011172131282944.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2246239727516647424.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2217974789468340224.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2223825414051340288.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:04:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2254054525940285440.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 77, in parse_par
+    print(aside_content, house_id, putaway, response.meta.house_title)
+AttributeError: 'dict' object has no attribute 'house_title'
+2019-05-15 22:34:47 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET https://cd.lianjia.com/robots.txt>: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\endpoints.py", line 975, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+2019-05-15 22:35:20 [scrapy.core.scraper] ERROR: Error downloading <GET https://cd.lianjia.com/zufang/pg1>
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\endpoints.py", line 975, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+2019-05-15 22:42:16 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET https://cd.lianjia.com/robots.txt>: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\endpoints.py", line 975, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+2019-05-15 22:42:52 [scrapy.core.scraper] ERROR: Error downloading <GET https://cd.lianjia.com/zufang/pg1>
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\endpoints.py", line 975, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+2019-05-15 23:48:52 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET https://cd.lianjia.com/robots.txt>: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\endpoints.py", line 975, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+2019-05-15 23:48:52 [scrapy.core.scraper] ERROR: Error downloading <GET https://cd.lianjia.com/zufang/pg1>
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\endpoints.py", line 975, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+2019-05-16 00:15:32 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-05-16 00:15:32 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\utils\misc.py", line 47, in load_object
+    obj = getattr(mod, name)
+AttributeError: module 'lianjiaitem.pipelines' has no attribute 'LianjiaPipeline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\crawler.py", line 80, in crawl
+    self.engine = self._create_engine()
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\crawler.py", line 105, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\engine.py", line 70, in __init__
+    self.scraper = Scraper(crawler)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\scraper.py", line 71, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\middleware.py", line 58, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\middleware.py", line 34, in from_settings
+    mwcls = load_object(clspath)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\utils\misc.py", line 49, in load_object
+    raise NameError("Module '%s' doesn't define any object named '%s'" % (module, name))
+NameError: Module 'lianjiaitem.pipelines' doesn't define any object named 'LianjiaPipeline'
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '合租·双楠映象4室1厅', 'house_address': '武侯-红牌楼', 'house_source': '自如', 'house_href': 'https://cd.lianjia.com//zufang/CD2207219398643548160.html', 'house_typ': '合租', 'house_mode': '4室1厅2卫', 'house_area': '20㎡', 'house_size': '朝东', 'putaway_time': '2019-03-07', 'house_id': 'CD2207219398643548160', 'house_price': '1460元/月', 'aside_content': '公寓-独立卫生间-近地铁-精装-押一付一-随时看房', 'broker': '李继龙', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：1年', 'look_house': '看房：随时可看', 'floor': '楼层：6/11层', 'elevator': '电梯：有', 'stall': '车位：租用车位', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '高品质合租  \n 1.不交物业费，押一付一，在校生短租一月，全城搬家费低至49元，钱少也能住进漂亮的房子。\n2.品质服务:公区双次保洁+非人为损坏维修+服务管家，生活更省心\n3.安全保障:人脸识别验证租客身份，高5万住房保险，让你入住更加安心。\n4.空调、冰箱、洗衣机、微波炉等家电，周末可以邀请好友做饭聚餐。\n5.不定期租客聚会，现实版的爱情公寓\n6.每月两次的公区保洁，让房间更加干净整洁'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 11; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '整租·南城都汇汇彩园2室2厅', 'house_address': '高新-市一医院', 'house_source': '诺臻公寓', 'house_href': 'https://cd.lianjia.com//zufang/CD2238361053753262080.html', 'house_typ': '整租', 'house_mode': '2室2厅1卫', 'house_area': '103㎡', 'house_size': '朝东南', 'putaway_time': '2019-04-19', 'house_id': 'CD2238361053753262080', 'house_price': '3800元/月', 'aside_content': '公寓-近地铁-随时看房', 'broker': '一管家', 'issue': '发布：26天前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：1年', 'look_house': '看房：随时可看', 'floor': '楼层：13/22层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：暂无数据', 'electro': '\xa0', 'fuel_gas': '用电：暂无数据', 'house_infos': '1.【位置】位于高新核心地段 金宝广场（武侯区雍翠路211号）。\n2.【地铁】地铁1号线高新地铁口。\n3.【公交车】1101路、12路、26路、61路、502路等经过。\n3.【商业】仁和春天国际、天府新谷、银泰IN99、环球中心、奥克斯广场等\n无中介费、带看不收费、附近房源多多，欢迎在线咨询与电话咨询。HB'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 14; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '整租·外滩3居室4600', 'house_address': '锦江-九眼桥', 'house_source': '贝壳优选', 'house_href': 'https://cd.lianjia.com//zufang/CD2255045855965093888.html', 'house_typ': '整租', 'house_mode': '3室1厅2卫', 'house_area': '126㎡', 'house_size': '朝东', 'putaway_time': '2019-05-12', 'house_id': 'CD2255045855965093888', 'house_price': '4600元/月', 'aside_content': '近地铁-精装-双卫生间-新上-随时看房', 'broker': '谢大凤', 'issue': '发布：3天前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：1年以内', 'look_house': '看房：需提前预约', 'floor': '楼层：高楼层/41层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '【户型介绍】 此房是外滩3室1厅1厨2卫，产权面积是126平，主卧带卫生间，主卧和客厅都带阳台。\n【装修描述】 此房卧室和客厅都带空调，每个卧室都有衣柜，主卧是1.8米的床，两个次卧是1.5米的床。\n【小区介绍】 外滩是实行的人车分流，有保安值班，进门需要刷卡，有地下车位。'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 12; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '合租·会所花园4室1厅', 'house_address': '武侯-五大花园', 'house_source': '自如', 'house_href': 'https://cd.lianjia.com//zufang/CD2239095161718317056.html', 'house_typ': '合租', 'house_mode': '4室1厅2卫', 'house_area': '15㎡', 'house_size': '朝南', 'putaway_time': '2019-04-20', 'house_id': 'CD2239095161718317056', 'house_price': '1390元/月', 'aside_content': '公寓-独立卫生间-近地铁-押一付一-随时看房', 'broker': '刘金铭', 'issue': '发布：25天前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：随时可看', 'floor': '楼层：13/16层', 'elevator': '电梯：暂无数据', 'stall': '车位：暂无数据', 'water': '用水：暂无数据', 'electro': '\xa0', 'fuel_gas': '用电：暂无数据', 'house_infos': '高品质小区的主卧独卫房间，品牌家具家电，新装修，空气质检合格，高舒适度，高***，服务周到的房屋管家，欢迎您的入住！'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 11; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '西岸观邸装修套三出租可随时看房', 'house_address': '金牛-国宾', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2204815762039259136.html', 'house_typ': '租赁方式未知', 'house_mode': '3室2厅2卫', 'house_area': '120㎡', 'house_size': '朝东北', 'putaway_time': '2019-03-04', 'house_id': 'CD2204815762039259136', 'house_price': '3200元/月', 'aside_content': '近地铁-随时看房', 'broker': '刘俊', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：需提前预约', 'floor': '楼层：高楼层/30层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '【交通出行】 房子地处金牛区西北三环外侧，出行方便，尤其对上班族来说是个不错的选择，小区有公交站地铁口。\n【周边配套】 红旗超市，么么超市，建行，农行，万家来农贸市场，小区有4个门，3号门距离茶店子客运站地铁口41米（百度地图数据）\n【小区介绍】 开发商：中国水电 物业：电建物业 1.6元平米 该小区分为2期，该房源属于2期，建筑年代是2012年；该房源所在的楼栋为3梯7户；车位300-350元月。小区位于金瑞路118号，24小时安保，刷卡进入；小区内有游泳池。'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 15; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '地铁7号线武侯国际花园套三双卫', 'house_address': '武侯-红牌楼', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2197028131724853248.html', 'house_typ': '租赁方式未知', 'house_mode': '3室2厅2卫', 'house_area': '104㎡', 'house_size': '朝南', 'putaway_time': '2019-02-21', 'house_id': 'CD2197028131724853248', 'house_price': '3200元/月', 'aside_content': '近地铁-随时看房', 'broker': '张滔', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：需提前预约', 'floor': '楼层：中楼层/13层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '【房源亮点】 此房是套三双卫带阳台不临街，有四台空调，家具家电齐全有个房间没有床需要可以配置\n【交通出行】 出门步行400米（数据来源于百度地图），到武侯大道双丰路公交站，途径45.53.72.165.201.251.334等多路公交车次，都可以通往市区，还有地铁7号线武侯大道站，出行更加方便快\n【小区介绍】 小区建筑分为两期：建成年代2010年，总高13层，都是框架结构，总共1278户，1栋和4栋2梯6户，2栋3梯8户，3栋和5栋2梯8户，物业为通顺物业，物业费1.5元每平，车位费300元，安保24小时值班，需要刷卡进入，小区自带游泳池和运动场，绿化植被随处可见'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 15; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '盘谷花园办公空房+一号线倪家桥C出口交通便利', 'house_address': '武侯-棕北', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2204334084200087552.html', 'house_typ': '租赁方式未知', 'house_mode': '3室2厅2卫', 'house_area': '174㎡', 'house_size': '朝东南 南', 'putaway_time': '2019-03-03', 'house_id': 'CD2204334084200087552', 'house_price': '6500元/月', 'aside_content': '近地铁-随时看房', 'broker': '周保军', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：一般下班后可看', 'floor': '楼层：高楼层/18层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '【房源亮点】 盘谷花园地处人民南路四段边上二环路以内，出小区大门就是地铁1号线倪家桥站C出口，在玉林和棕北成熟生活经济商圈\n【装修描述】 小区一共5栋11个单元，内设游泳池，小区刷卡进出，人车分流，地下300元月-450元月，车位不紧张\n【周边配套】 盘谷花园地处人民南路四段边上二环路以内，在玉林和棕北等成熟生活片。小区一共有五栋房子十一个单元'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 22; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '枫丹国际1室1厅3900元', 'house_address': '高新-金融城', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2215841798541287424.html', 'house_typ': '租赁方式未知', 'house_mode': '1室1厅1卫', 'house_area': '66㎡', 'house_size': '朝东', 'putaway_time': '2019-03-19', 'house_id': 'CD2215841798541287424', 'house_price': '3900元/月', 'aside_content': '近地铁-随时看房', 'broker': '邓声秀', 'issue': '发布：1个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：需提前预约', 'floor': '楼层：低楼层/31层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '没有说明'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 13; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '合租·光华欣苑4室1厅', 'house_address': '青羊-外光华', 'house_source': '自如', 'house_href': 'https://cd.lianjia.com//zufang/CD2239011172131282944.html', 'house_typ': '合租', 'house_mode': '4室1厅2卫', 'house_area': '12㎡', 'house_size': '朝西', 'putaway_time': '2019-04-20', 'house_id': 'CD2239011172131282944', 'house_price': '1230元/月', 'aside_content': '公寓-独立卫生间-近地铁-押一付一-随时看房', 'broker': '刘倩', 'issue': '发布：25天前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：随时可看', 'floor': '楼层：12/18层', 'elevator': '电梯：暂无数据', 'stall': '车位：暂无数据', 'water': '用水：暂无数据', 'electro': '\xa0', 'fuel_gas': '用电：暂无数据', 'house_infos': '正规的主卧室，带一个独立卫生间，私密性比较好，还带一个飘窗，采光比较好。空间格局也比较合理，居住起来舒适，装修风格温馨甜美。'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 11; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '整租·金地天府城2室1厅', 'house_address': '高新-广都', 'house_source': '诺臻公寓', 'house_href': 'https://cd.lianjia.com//zufang/CD2217974789468340224.html', 'house_typ': '整租', 'house_mode': '2室1厅1卫', 'house_area': '72㎡', 'house_size': '朝东南', 'putaway_time': '2019-03-22', 'house_id': 'CD2217974789468340224', 'house_price': '2600元/月', 'aside_content': '公寓-近地铁-精装-随时看房', 'broker': '在线客服y', 'issue': '发布：1个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：6~24个月', 'look_house': '看房：随时可看', 'floor': '楼层：30/31层', 'elevator': '电梯：暂无数据', 'stall': '车位：暂无数据', 'water': '用水：暂无数据', 'electro': '\xa0', 'fuel_gas': '用电：暂无数据', 'house_infos': '1、小区距1号线华阳地铁口500米 ，距天府新区政务中心公交站（503路、504路、509路、t1路等）400米\n2、小区周围超市，饭店，奶茶店等生活配套齐全，满足日常生活所需\n3、物业费、水电气费，租户自缴\n4、如有其它房源需求，欢迎来电咨询'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 12; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '家电齐全，拎包入住，交通便利，配套齐全', 'house_address': '温江-光华大道沿线', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2213620663611301888.html', 'house_typ': '租赁方式未知', 'house_mode': '2室1厅1卫', 'house_area': '86㎡', 'house_size': '朝东南', 'putaway_time': '2019-03-16', 'house_id': 'CD2213620663611301888', 'house_price': '1600元/月', 'aside_content': '近地铁-随时看房', 'broker': '冯毅', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：需提前预约', 'floor': '楼层：高楼层/30层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '【房源亮点】 成熟小区：小区环境优美，绿化高，小区种植各种花卉，可供观赏。\n【装修描述】 此房带装修，装修风格简单温馨，家具家电齐全，拎包入住。。。。。\n【小区介绍】 此小区环境优美，物业管理成熟，刷卡进出，保安24小时巡逻，为您提供一个安全的居住环境'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 19; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '合租·南城都汇汇彩园4室1厅', 'house_address': '高新-市一医院', 'house_source': '自如', 'house_href': 'https://cd.lianjia.com//zufang/CD2238224072062271488.html', 'house_typ': '合租', 'house_mode': '4室1厅3卫', 'house_area': '11㎡', 'house_size': '朝北', 'putaway_time': '2019-04-19', 'house_id': 'CD2238224072062271488', 'house_price': '1590元/月', 'aside_content': '公寓-独立卫生间-近地铁-押一付一-随时看房', 'broker': '唐江波', 'issue': '发布：26天前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：随时可看', 'floor': '楼层：17/22层', 'elevator': '电梯：暂无数据', 'stall': '车位：暂无数据', 'water': '用水：暂无数据', 'electro': '\xa0', 'fuel_gas': '用电：暂无数据', 'house_infos': '优质次卧，空间布局合理，光线棒棒的，在陌生的城市中带来丝丝暖意，小区周边的生活配套设施很好，适合年轻人居住。'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 14; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '整租·少陵横街68号3居室2250', 'house_address': '武侯-双楠', 'house_source': '贝壳优选', 'house_href': 'https://cd.lianjia.com//zufang/CD2253491314866003968.html', 'house_typ': '整租', 'house_mode': '3室1厅1卫', 'house_area': '79㎡', 'house_size': '朝南', 'putaway_time': '2019-05-10', 'house_id': 'CD2253491314866003968', 'house_price': '2250元/月', 'aside_content': '新上-随时看房', 'broker': '苟易文', 'issue': '发布：5天前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：1年以内', 'look_house': '看房：需提前预约', 'floor': '楼层：高楼层/7层', 'elevator': '电梯：无', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '没有说明'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 17; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '贝森兴苑优质大套二家具家电具备', 'house_address': '青羊-贝森', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2213609971172507648.html', 'house_typ': '租赁方式未知', 'house_mode': '2室1厅1卫', 'house_area': '67㎡', 'house_size': '朝东 南', 'putaway_time': '2019-03-16', 'house_id': 'CD2213609971172507648', 'house_price': '1800元/月', 'aside_content': '近地铁-随时看房', 'broker': '李莲花', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：需提前预约', 'floor': '楼层：中楼层/7层', 'elevator': '电梯：无', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '【交通出行】 交通出行方便，贝森路上有公交 35 105 164 路，地铁也很方便，地铁4号线文化宫站，几百米\n【出租原因】 业主不在这边住，不方便打理，户型方正，居家装修，采光很好，适宜居住。\n【周边配套】 此房位置配套丰富，西村，农贸市场，文化宫以及文化宫地铁站，生活丰富，距离成都满地可医院450米（此数据来源于百度地图）'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 15; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '东门大桥锦江印象套二清爽业主自住', 'house_address': '锦江-合江亭', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2213610397590888448.html', 'house_typ': '租赁方式未知', 'house_mode': '2室1厅1卫', 'house_area': '78㎡', 'house_size': '朝东南', 'putaway_time': '2019-03-16', 'house_id': 'CD2213610397590888448', 'house_price': '3500元/月', 'aside_content': '近地铁-随时看房', 'broker': '岳宴', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：需提前预约', 'floor': '楼层：低楼层/31层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '【房源亮点】 太古里 春熙路 成都市第七人民医院 四川音乐学院 香格里拉酒店 兰桂坊 太古里 春熙路 合江亭 水井坊等\n【户型介绍】 此房是套二单卫 卧室有阳台 安静 不临街 通天然气的 厨房也有阳台 简洁明亮\n【周边配套】 1.房子位于全球最酷50城市街区，列榜单第19名的时尚，美食，复古，文艺的——镗钯街。地理位置十分优越，北靠春熙路 ，太古里，南接合江亭，东壤兰桂坊，水井坊，东门大桥等休闲娱乐繁华圈，还可坐船在府拦河上观光，到339，九眼桥休闲，购物。'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 16; 2 is required
+2019-05-16 00:26:07 [scrapy.core.scraper] ERROR: Error processing {'title': '东门大桥时代豪庭套三装修好随时可以入住', 'house_address': '锦江-合江亭', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2212283409546887168.html', 'house_typ': '租赁方式未知', 'house_mode': '3室1厅2卫', 'house_area': '143㎡', 'house_size': '朝东北', 'putaway_time': '2019-03-14', 'house_id': 'CD2212283409546887168', 'house_price': '12000元/月', 'aside_content': '近地铁', 'broker': '岳宴', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：需提前预约', 'floor': '楼层：低楼层/32层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '【房源亮点】 房子位于全球最酷50城市街区，列榜单第19名的时尚，美食，复古，文艺的——镗钯街。地理位置十分优越，北靠春熙路 ，太古里，南接合江亭，东壤兰桂坊，水井坊，东门大桥等休闲娱乐繁华圈，还可坐船在府拦河上观光，到339，九眼桥休闲，购物。\n【周边配套】 该房位于东门大桥春熙路商圈，日常生活购物等问题丝毫不用担心，超市如：红旗连锁超市、家乐福等，逛街可去：太古里、春熙路、晶融汇。还有成都夜生活最集中的兰桂坊和九眼桥等. 修建于2010年园林小区，有地下会所（恒温游泳池，健身房），而且出门交通\n【小区介绍】 该小区主打大户型大阳台住宅，套二的面积大约在106-116㎡之间，套三主要在143-218㎡之间，住户基本上都是对生活品质高要求的人。小区有地下会所游泳池健身房'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 19; 2 is required
+2019-05-16 00:26:08 [scrapy.core.scraper] ERROR: Error processing {'title': '合租·首航欣程6室1厅', 'house_address': '武侯-棕北', 'house_source': '诺臻公寓', 'house_href': 'https://cd.lianjia.com//zufang/CD2212928180967178240.html', 'house_typ': '合租', 'house_mode': '6室1厅4卫', 'house_area': '12㎡', 'house_size': '朝西北', 'putaway_time': '2019-03-15', 'house_id': 'CD2212928180967178240', 'house_price': '1050元/月', 'aside_content': '公寓-独立卫生间-近地铁-随时看房', 'broker': '一管家', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：1年', 'look_house': '看房：随时可看', 'floor': '楼层：32/32层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '1、房屋介绍：\n室内装修精美，独立居住空间，采光好宽敞明亮。居家温馨，完全满足日常生活需求。\n2、小区介绍：\n首航欣程小区环境优美，绿化好。治安安全有保障。小区周边配套成熟。\n3、总结：\n房屋照片均是实景拍摄，随时都能看房，随时欢迎您来电！YGDM'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 11; 2 is required
+2019-05-16 00:26:08 [scrapy.core.scraper] ERROR: Error processing {'title': '合租·时代晶科名苑4室1厅', 'house_address': '高新-市一医院', 'house_source': '自如', 'house_href': 'https://cd.lianjia.com//zufang/CD2246239727516647424.html', 'house_typ': '合租', 'house_mode': '4室1厅2卫', 'house_area': '12㎡', 'house_size': '朝西', 'putaway_time': '2019-04-30', 'house_id': 'CD2246239727516647424', 'house_price': '1890元/月', 'aside_content': '公寓-独立卫生间-近地铁-押一付一-随时看房', 'broker': '邓瑶', 'issue': '发布：15天前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：6~12个月', 'look_house': '看房：随时可看', 'floor': '楼层：5/20层', 'elevator': '电梯：暂无数据', 'stall': '车位：暂无数据', 'water': '用水：暂无数据', 'electro': '\xa0', 'fuel_gas': '用电：暂无数据', 'house_infos': '质主卧独卫，空间布局合理，金属灰与水晶粉碰撞后的拿铁风格，小区周边的生活配套设施很好，适合年轻人居住。'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 13; 2 is required
+2019-05-16 00:26:08 [scrapy.core.scraper] ERROR: Error processing {'title': '地铁七号线西南交大站电梯套二居家出租', 'house_address': '金牛-沙湾', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2202120658736128000.html', 'house_typ': '租赁方式未知', 'house_mode': '3室1厅1卫', 'house_area': '89㎡', 'house_size': '朝东南', 'putaway_time': '2019-02-28', 'house_id': 'CD2202120658736128000', 'house_price': '3000元/月', 'aside_content': '近地铁-随时看房', 'broker': '王瑛俊兰', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：暂无数据', 'floor': '楼层：高楼层/31层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '【交通出行】 离7号线西南交大站三百多米（数据来源百度地图），也可以到沙湾公交站（3路、56路、56A路、93路、101路、109路\n【周边配套】 小区商圈成熟，生活起居方便，购物有凯德广场，人人乐；有橄榄树幼儿园，沙湾，光荣：银行有建行、农行等：医院有中铁二局医院\n【小区介绍】 现代城13年交房，小区总共7栋，1,3,5,7都是独栋，2，4，6有两个单元，小区物业费是2元月*平方米，停车位是1.8排量以下300每月，1.8-2.5排量是400每月，2.5排量以上是500'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 18; 2 is required
+2019-05-16 00:26:08 [scrapy.core.scraper] ERROR: Error processing {'title': '整租·天鹅湖北苑1居室2400', 'house_address': '高新-新会展', 'house_source': '贝壳优选', 'house_href': 'https://cd.lianjia.com//zufang/CD2255725677993541632.html', 'house_typ': '整租', 'house_mode': '1室0厅1卫', 'house_area': '51㎡', 'house_size': '朝东南', 'putaway_time': '2019-05-13', 'house_id': 'CD2255725677993541632', 'house_price': '2400元/月', 'aside_content': '近地铁-精装-新上-随时看房', 'broker': '冷婷婷', 'issue': '发布：2天前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：1年以内', 'look_house': '看房：需提前预约', 'floor': '楼层：中楼层/31层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '没有说明'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 15; 2 is required
+2019-05-16 00:26:08 [scrapy.core.scraper] ERROR: Error processing {'title': '天紫界牛王庙地铁30平标间出租拎包入住', 'house_address': '锦江-九眼桥', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2200520644544692224.html', 'house_typ': '租赁方式未知', 'house_mode': '1室0厅1卫', 'house_area': '30㎡', 'house_size': '朝西南', 'putaway_time': '2019-02-26', 'house_id': 'CD2200520644544692224', 'house_price': '2000元/月', 'aside_content': '近地铁-随时看房', 'broker': '杨霞', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：需提前预约', 'floor': '楼层：中楼层/55层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '【户型介绍】 此房为30平米的标间，可供1-2人居住使用，室内比起一般的套一面积小些，但是家具家电皆齐全，不通气，若涉及到做饭可配备电磁炉等电器设施，水电与隔墙另一户租客公用，但各自有分表，费用可明细！\n【周边配套】 旁边就是九眼桥，河那边就是九眼桥酒吧一条街。 楼下有超市、饭馆、银行。有多路公交，还有牛王庙地铁，生活居家都很方便!\n【小区介绍】 小区建成年代2012年，楼龄新，楼道有清洁阿姨日常打扫，环境好，居住人口多为年轻人，老外，居住人口素质高！'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 19; 2 is required
+2019-05-16 00:26:08 [scrapy.core.scraper] ERROR: Error processing {'title': '华悦府精装套三，俯瞰公园，看房方便', 'house_address': '高新-金融城', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2205754627528597504.html', 'house_typ': '租赁方式未知', 'house_mode': '3室2厅3卫', 'house_area': '287㎡', 'house_size': '朝南', 'putaway_time': '2019-03-05', 'house_id': 'CD2205754627528597504', 'house_price': '33000元/月', 'aside_content': '近地铁-随时看房', 'broker': '范艺瀚', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：需提前预约', 'floor': '楼层：中楼层/46层', 'elevator': '电梯：暂无数据', 'stall': '车位：暂无数据', 'water': '用水：暂无数据', 'electro': '\xa0', 'fuel_gas': '用电：暂无数据', 'house_infos': '【房源亮点】 装修为开放商统一装修，用料讲究，布置大方。房间内采光良好，视野开阔无遮挡。每层楼都有专属管家24小时为您服务\n【交通出行】 银泰华悦居最近的公交车站有天府长城站，府城大道东段站，可乘坐公交有：184. 120. 133. G 25等。乘坐地铁一号线方便，距离金融城地铁站750米（来自百度地图\n【周边配套】 楼下就是银泰i99购物商场，还有九方购物广场，距离凯德天府2公里（来自百度地图）。还有超市，菜市场。楼下就是人工湖和公园'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 17; 2 is required
+2019-05-16 00:26:08 [scrapy.core.scraper] ERROR: Error processing {'title': '合租·万科金色领域4室1厅', 'house_address': '青羊-万家湾', 'house_source': '自如', 'house_href': 'https://cd.lianjia.com//zufang/CD2246964924498575360.html', 'house_typ': '合租', 'house_mode': '4室1厅2卫', 'house_area': '11㎡', 'house_size': '朝南', 'putaway_time': '2019-05-01', 'house_id': 'CD2246964924498575360', 'house_price': '1690元/月', 'aside_content': '公寓-独立卫生间-近地铁-押一付一-随时看房', 'broker': '舒磊', 'issue': '发布：14天前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：6~12个月', 'look_house': '看房：随时可看', 'floor': '楼层：12/24层', 'elevator': '电梯：暂无数据', 'stall': '车位：暂无数据', 'water': '用水：暂无数据', 'electro': '\xa0', 'fuel_gas': '用电：暂无数据', 'house_infos': '正规的主卧室，带独立卫生间，浴缸，私密性比较好，适合一对情侣或者闺蜜入住，房间是朝小区中庭花园，比较安静宜居。'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 13; 2 is required
+2019-05-16 00:26:08 [scrapy.core.scraper] ERROR: Error processing {'title': '金地嘉年华A区套二拎包入住房东诚租', 'house_address': '青羊-金沙', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2202203602045640704.html', 'house_typ': '租赁方式未知', 'house_mode': '2室1厅1卫', 'house_area': '76㎡', 'house_size': '朝东南', 'putaway_time': '2019-02-28', 'house_id': 'CD2202203602045640704', 'house_price': '2400元/月', 'aside_content': '近地铁-随时看房', 'broker': '蔡红', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：需提前预约', 'floor': '楼层：低楼层/25层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '【房源亮点】 金地嘉年华A区，有装修套二，高楼层，两室两厅一厨一卫，厨房有生活阳台，带家具家电，可以随时拎包入住。\n【出租原因】 出租多余房产，房子目前空置状态，提前预约看房，支持随时看房。\n【小区介绍】 该小区建于2010年，物业费1.5每平米，小区保安值班，人车分流，刷卡进入，小区电梯需要刷卡，小区内有儿童游乐场所，小区负一楼有车位出租，小区园林式绿化设计，有小桥流水。'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 17; 2 is required
+2019-05-16 00:26:08 [scrapy.core.scraper] ERROR: Error processing {'title': '合租·锦江帆影6室1厅', 'house_address': '高新-中和', 'house_source': '诺臻公寓', 'house_href': 'https://cd.lianjia.com//zufang/CD2223825414051340288.html', 'house_typ': '合租', 'house_mode': '6室1厅2卫', 'house_area': '16㎡', 'house_size': '朝东南', 'putaway_time': '2019-03-30', 'house_id': 'CD2223825414051340288', 'house_price': '1300元/月', 'aside_content': '公寓-独立卫生间-随时看房', 'broker': '在线客服y', 'issue': '发布：1个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：1~2年', 'look_house': '看房：随时可看', 'floor': '楼层：12/32层', 'elevator': '电梯：有', 'stall': '车位：租用车位', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '1、小区门口700米处中和大道二段西公交站（185路、188路、404路等），出行交通方便\n2、小区周围有蔬菜、水果等超市，便利、实惠，满足日常生活所需\n3、房租为纯房租，物业、水电气费平摊，无其它杂费\n4、如有其它房源需求，欢迎来电咨询'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 11; 2 is required
+2019-05-16 00:26:08 [scrapy.core.scraper] ERROR: Error processing {'title': '交大北园2室1厅1600元', 'house_address': '金牛-西南交大', 'house_source': '链家', 'house_href': 'https://cd.lianjia.com//zufang/CD2199710070692904960.html', 'house_typ': '租赁方式未知', 'house_mode': '2室1厅1卫', 'house_area': '54㎡', 'house_size': '朝南', 'putaway_time': '2019-02-25', 'house_id': 'CD2199710070692904960', 'house_price': '1600元/月', 'aside_content': '近地铁-随时看房', 'broker': '李坤', 'issue': '发布：2个月前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：暂无数据', 'look_house': '看房：需提前预约', 'floor': '楼层：高楼层/7层', 'elevator': '电梯：无', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '没有说明'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+ValueError: dictionary update sequence element #0 has length 13; 2 is required
+2019-05-16 00:26:09 [scrapy.core.scraper] ERROR: Error processing {'title': '整租·摩卡筑2居室2900', 'house_address': '武侯-川音', 'house_source': '贝壳优选', 'house_href': 'https://cd.lianjia.com//zufang/CD2254054525940285440.html', 'house_typ': '整租', 'house_mode': '2室1厅1卫', 'house_area': '61㎡', 'house_size': '朝西南', 'putaway_time': '2019-05-11', 'house_id': 'CD2254054525940285440', 'house_price': '2900元/月', 'aside_content': '近地铁-新上-随时看房', 'broker': '周秋宏', 'issue': '发布：4天前', 'cheak': '入住：随时入住', 'tenancy_term': '租期：1年以内', 'look_house': '看房：需提前预约', 'floor': '楼层：低楼层/18层', 'elevator': '电梯：有', 'stall': '车位：暂无数据', 'water': '用水：民水', 'electro': '\xa0', 'fuel_gas': '用电：民电', 'house_infos': '没有说明'}
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\pipelines.py", line 37, in process_item
+    print(list(dict(item.values())))
+V
+2019-05-16 00:58:06 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET https://cd.lianjia.com/robots.txt>: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\endpoints.py", line 975, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+2019-05-16 00:58:06 [scrapy.core.scraper] ERROR: Error downloading <GET https://cd.lianjia.com/zufang/pg1>
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\endpoints.py", line 975, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+2019-05-16 00:58:50 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 59, in parse
+    time.sleep(random.choice['0.5', '1', '1.5', '2', '2.5'])
+TypeError: 'method' object is not subscriptable
+2019-05-16 01:00:45 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com/zufang/pg1> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 60, in parse
+    time.sleep(random.choice(rest))
+TypeError: an integer is required (got type str)
+2019-05-16 01:01:58 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2204334084200087552.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:01:59 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2255045855965093888.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:01 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2238361053753262080.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:03 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2207219398643548160.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:04 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2204815762039259136.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:06 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2212283409546887168.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:06 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2238224072062271488.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:08 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2213609971172507648.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:11 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2213610397590888448.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2253491314866003968.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2217974789468340224.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2239011172131282944.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2213620663611301888.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2215841798541287424.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:18 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2239095161718317056.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:20 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2197028131724853248.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:22 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2199710070692904960.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2254054525940285440.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2246239727516647424.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2246964924498575360.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2200520644544692224.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2202120658736128000.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2202203602045640704.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2205754627528597504.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2255725677993541632.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:02:25 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2212928180967178240.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 142, in parse_par
+    file_path = 'C:\python\scrapy_win\lianjiaitem\lianjiaitem\images{}'.format(response.meta['house_titme'])
+KeyError: 'house_titme'
+2019-05-16 01:03:35 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2238361053753262080.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 147, in parse_par
+    request.urlretrieve(image_url, file_path + os.sep + flag)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 248, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 526, in open
+    response = self._open(req, data)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 544, in _open
+    '_open', req)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 504, in _call_chain
+    result = func(*args)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 1361, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 1321, in do_open
+    r = h.getresponse()
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\ssl.py", line 1009, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\ssl.py", line 871, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\ssl.py", line 631, in read
+    v = self._sslobj.read(len, buffer)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2019-05-16 01:06:25 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2213610397590888448.html> (referer: https://cd.lianjia.com/zufang/pg1)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 148, in parse_par
+    request.urlretrieve(image_url, file_path + os.sep + flag)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 248, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 526, in open
+    response = self._open(req, data)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 544, in _open
+    '_open', req)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 504, in _call_chain
+    result = func(*args)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 1361, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\urllib\request.py", line 1321, in do_open
+    r = h.getresponse()
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\ssl.py", line 1009, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\ssl.py", line 871, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\ssl.py", line 631, in read
+    v = self._sslobj.read(len, buffer)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2019-05-16 02:03:00 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET https://cd.lianjia.com/robots.txt>: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\twisted\internet\endpoints.py", line 975, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: cd.lianjia.com.
+2019-05-16 02:18:29 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2257272847569256448.html> (referer: https://cd.lianjia.com/zufang/pg11)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 82, in parse_par
+    broker = response.xpath('//ul[@class="content__aside__list"]/li/div[@class="content__aside__list--title oneline"]/span/@title').extract()[0]
+IndexError: list index out of range
+2019-05-16 02:18:31 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2257221242279444480.html> (referer: https://cd.lianjia.com/zufang/pg11)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 82, in parse_par
+    broker = response.xpath('//ul[@class="content__aside__list"]/li/div[@class="content__aside__list--title oneline"]/span/@title').extract()[0]
+IndexError: list index out of range
+2019-05-16 02:22:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cd.lianjia.com//zufang/CD2224467589575213056.html> (referer: https://cd.lianjia.com/zufang/pg31)
+Traceback (most recent call last):
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\requests\Anaconda3\envs\spider\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\python\scrapy_win\lianjiaitem\lianjiaitem\spiders\lianjia.py", line 65, in parse_par
+    putaway = response.xpath('//div[@class="content__subtitle"]/text()').extract()[1]
+IndexError: list index out of range
