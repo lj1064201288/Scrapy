@@ -48,8 +48,8 @@ for i in range(10):
 
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
-   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-   'Accept-Language': 'en',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en',
     'User-Agent': random.choice(lst)
 }
 
@@ -105,6 +105,7 @@ DOWNLOAD_TIMEOUT = 200
 
 LOG_LEVEL = 'ERROR'
 LOG_FILE = 'beike..log'
+# JOBDIR = 'job.txt'
 
 MYSQL_HOST = 'localhost'
 MSQL_USER = 'root'

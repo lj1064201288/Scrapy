@@ -34,22 +34,34 @@ class BeikeSpider(CrawlSpider):
         return links
 
     def parse_item(self, response):
+        # 获取到该城市的楼盘数量
         number = response.xpath('//div[@class="resblock-have-find"]/span[@class="value"]/text()').extract()[0]
+        # 每页10条信息，获取总页数
         max_page = math.ceil(int(number) / 10)
+        # 解析出楼盘详细页面的地址节点
         lis = response.xpath('//div[@class="resblock-list-container clearfix"]/ul[@class="resblock-list-wrapper"]/li')
+        # 由于解析出来的链接是slug的，所以需要获得该网址的域名，因为每个城市的域名又不一样，所以进行处理，然后拼接
         base_url = response.url.split('/')[:3]
+        # 将域名进行拼接
         base_url = '/'.join(base_url)
         for li in lis:
             try:
+                # 解析出详细页面的slug
                 link = li.xpath('./a/@href').extract()[0]
+                # 将URL进行拼接
                 detail_link = base_url + link
+                # 回调域名进行请求解析
                 yield scrapy.Request(url=detail_link, callback=self.detail_parse, encoding='utf-8', dont_filter=False)
             except IndexError as e:
                 print(response.url, e.args)
                 break
+        # 提取出当前页面的页数
         page = re.search('/pg(\d+)', response.url)
+        # 对页面进行+1
         next_page = int(page.group(1)) + 1
+        # 如果页数小于等于总页数,将执行递归操作
         if next_page <= max_page:
+            # 对页数进行替换
             next_url = re.sub('pg(\d+)','pg'+str(next_page), response.url)
             yield scrapy.Request(url=next_url, callback=self.parse_item, encoding='utf-8', dont_filter=False)
 
